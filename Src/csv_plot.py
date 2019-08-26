@@ -33,14 +33,14 @@ try:
     plt.xlabel('Frequency(MHz)')
     plt.ylabel('Inductance(uH)')
     plt.ylim(0,15)
-    plt.grid(color='grey', linestyle='--', linewidth=2)
+    plt.grid(True) #(color='grey', linestyle='--', linewidth=2)
     plt.show(block=True)
 
     plt.figure()
     plt.plot(Frequencylist,Rslist)
     plt.xlabel('Frequency(MHz)')
     plt.ylabel('Series Resistance(Ohm)')
-    plt.grid(color='grey', linestyle='--', linewidth=2)
+    plt.grid(True) #(color='grey', linestyle='--', linewidth=2)
     plt.show(block=True)
     plt.show()
 

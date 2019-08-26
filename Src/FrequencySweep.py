@@ -63,6 +63,7 @@ try:
     plt.xlabel('Frequency(MHz)')
     plt.ylabel('Inductance(uH)')
     plt.ylim(0,15)
+    plt.grid(True)
     f1.show()
     #plt.show()
 
@@ -70,6 +71,7 @@ try:
     plt.plot(Frequencylist,Rslist)
     plt.xlabel('Frequency(MHz)')
     plt.ylabel('Series Resistance(Ohm)')
+    plt.grid(True)
     f2.show()
 
 except Exception as err:
