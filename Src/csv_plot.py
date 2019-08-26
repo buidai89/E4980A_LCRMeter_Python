@@ -7,6 +7,7 @@ readme: https://chrisalbon.com/python/data_wrangling/pandas_dataframe_importing_
 """
 
 #This is the code I use to open the meter (You will need to put in your own address):
+import visa
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -33,17 +34,14 @@ try:
     plt.xlabel('Frequency(MHz)')
     plt.ylabel('Inductance(uH)')
     plt.ylim(0,15)
-    plt.grid(color='grey', linestyle='--', linewidth=2)
-    plt.show(block=True)
+    plt.show(block=False)
 
     plt.figure()
     plt.plot(Frequencylist,Rslist)
     plt.xlabel('Frequency(MHz)')
     plt.ylabel('Series Resistance(Ohm)')
-    plt.grid(color='grey', linestyle='--', linewidth=2)
-    plt.show(block=True)
+    plt.show(block=False)
     plt.show()
-
 except Exception as err:
     print ('Exception" '+str(err.message))
 finally:
