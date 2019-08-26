@@ -24,8 +24,7 @@ try:
     
     rm=visa.ResourceManager('C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\agvisa\\agbin\\visa32.dll')
     e4980a = rm.open_resource("TCPIP0::130.216.177.66::inst0::INSTR")
-    e4980a.timeout = 10000
-    
+    e4980a.timeout = 10000 
     e4980a.write("*CLS")
     e4980a.write("*IDN?")
     print (e4980a.read())
@@ -48,8 +47,7 @@ try:
             Lslist.append(Ls*1000000)   #convert to uH
             Rslist.append(Rs)
             Frequencylist.append(Frequency/1000000) #convert to Mhz
-            Frequency += FREQUENCY_STEP
-    
+            Frequency += FREQUENCY_STEP 
     #Export data to csv
     MeasureDataSet = list(zip(Frequencylist,Lslist,Rslist))
     df = pd.DataFrame(MeasureDataSet,columns=['Freq(MHz)','Ls(uH)','Rs(Ohm)'])
